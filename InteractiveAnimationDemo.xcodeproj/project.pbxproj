@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8323D6E21DBBB39100A8FA15 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D6E11DBBB39100A8FA15 /* CustomPageViewController.swift */; };
-		8323D6E41DBBB64600A8FA15 /* RightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D6E31DBBB64600A8FA15 /* RightDetailsViewController.swift */; };
 		8323D6E71DBBBB8600A8FA15 /* FloatingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8323D6E61DBBBB8600A8FA15 /* FloatingScene.sks */; };
 		8323D6E91DBBBEA100A8FA15 /* FloatingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D6E81DBBBEA100A8FA15 /* FloatingScene.swift */; };
 		83B324931DBB1BED000A13D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B324921DBB1BED000A13D9 /* AppDelegate.swift */; };
@@ -30,8 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8323D6E11DBBB39100A8FA15 /* CustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
-		8323D6E31DBBB64600A8FA15 /* RightDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightDetailsViewController.swift; sourceTree = "<group>"; };
 		8323D6E61DBBBB8600A8FA15 /* FloatingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FloatingScene.sks; sourceTree = "<group>"; };
 		8323D6E81DBBBEA100A8FA15 /* FloatingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingScene.swift; sourceTree = "<group>"; };
 		83B3248F1DBB1BEC000A13D9 /* InteractiveAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,18 +60,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8323D6E01DBBB36E00A8FA15 /* PageViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8323D6E11DBBB39100A8FA15 /* CustomPageViewController.swift */,
-			);
-			name = PageViewController;
-			sourceTree = "<group>";
-		};
 		8323D6E51DBBB70300A8FA15 /* ContentViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8323D6E31DBBB64600A8FA15 /* RightDetailsViewController.swift */,
 				83B324941DBB1BED000A13D9 /* LeftMainViewController.swift */,
 			);
 			name = ContentViewControllers;
@@ -103,8 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				8323D6E51DBBB70300A8FA15 /* ContentViewControllers */,
-				8323D6E01DBBB36E00A8FA15 /* PageViewController */,
-				83B324B21DBB1EF2000A13D9 /* Animators */,
 				83B324921DBB1BED000A13D9 /* AppDelegate.swift */,
 				83B324961DBB1BED000A13D9 /* Main.storyboard */,
 				83B324991DBB1BED000A13D9 /* Assets.xcassets */,
@@ -123,13 +108,6 @@
 				83B324A91DBB1BED000A13D9 /* Info.plist */,
 			);
 			path = InteractiveAnimationDemoTests;
-			sourceTree = "<group>";
-		};
-		83B324B21DBB1EF2000A13D9 /* Animators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Animators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8323D6E41DBBB64600A8FA15 /* RightDetailsViewController.swift in Sources */,
-				8323D6E21DBBB39100A8FA15 /* CustomPageViewController.swift in Sources */,
 				83B324951DBB1BED000A13D9 /* LeftMainViewController.swift in Sources */,
 				8323D6E91DBBBEA100A8FA15 /* FloatingScene.swift in Sources */,
 				83B324931DBB1BED000A13D9 /* AppDelegate.swift in Sources */,

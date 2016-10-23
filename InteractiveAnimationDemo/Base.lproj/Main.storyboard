@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,38 +23,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-135" y="519"/>
-        </scene>
-        <!--Right Details View Controller-->
-        <scene sceneID="Wjp-z8-k9B">
-            <objects>
-                <viewController storyboardIdentifier="RightDetailsViewControllerIdentifier" id="6iS-aq-vPj" customClass="RightDetailsViewController" customModule="InteractiveAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mhN-bN-5V0"/>
-                        <viewControllerLayoutGuide type="bottom" id="4pX-Ho-WG0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wF0-hT-Ndf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ws-l9-eMI">
-                                <state key="normal" title="Hide"/>
-                                <connections>
-                                    <segue destination="zTb-y9-Nqx" kind="unwind" unwindAction="unwindToViewControllerWithSender:" id="lCu-NE-T76"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.21827040240363704" green="0.40567980908204848" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="6Ws-l9-eMI" secondAttribute="trailing" constant="10" id="LWl-tR-igW"/>
-                            <constraint firstItem="6Ws-l9-eMI" firstAttribute="leading" secondItem="wF0-hT-Ndf" secondAttribute="leadingMargin" constant="10" id="ROl-Go-t6s"/>
-                            <constraint firstItem="4pX-Ho-WG0" firstAttribute="top" secondItem="6Ws-l9-eMI" secondAttribute="bottom" constant="20" id="lXH-8k-qtd"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u1J-xd-6Zb" sceneMemberID="firstResponder"/>
-                <exit id="zTb-y9-Nqx" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="839" y="518"/>
         </scene>
     </scenes>
 </document>

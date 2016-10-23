@@ -152,14 +152,4 @@ class FloatingScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
     }
-    
-    override func didChangeSize(_ oldSize: CGSize) {
-
-        NSLog("%@", "Body Did change size")
-       
-        let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
-        borderBody.friction = 0
-        self.physicsBody = borderBody
-
-    }
 }
