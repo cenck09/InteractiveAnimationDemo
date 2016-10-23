@@ -12,12 +12,12 @@ import UIKit
 
 class FloatingScene: SKScene {
     
-    static let orbCount : Int = 15
-    static let maxLife : UInt32 = 30
+    static let orbCount : Int = 100
+    static let maxLife : UInt32 = 3
     static let minLife : UInt32 = 5
     
-    static let maxSize : UInt32 = 20
-    static let minSize : UInt32 = 20
+    static let maxSize : UInt32 = 10
+    static let minSize : UInt32 = 18
 
     static let fadeSpeed : Int = 2
     
@@ -43,8 +43,8 @@ class FloatingScene: SKScene {
         
         for _ in 0...FloatingScene.orbCount {
 
-            let deadlineTime = DispatchTime.now() + .seconds(Int(arc4random_uniform(4)))
-            DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            let spawnTime = DispatchTime.now() + .seconds(Int(arc4random_uniform(4)))
+            DispatchQueue.main.asyncAfter(deadline: spawnTime) {
                 self.spawnSprite(sprite: SKSpriteNode(imageNamed: "ball-o"))
             }
         }
@@ -80,8 +80,8 @@ class FloatingScene: SKScene {
         
         sprite.physicsBody?.applyImpulse(CGVector(dx: randX, dy: randY))
         
-        let deadlineTime = DispatchTime.now() + .milliseconds(Int(arc4random_uniform(1000)))
-        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+        let moveTime = DispatchTime.now() + .milliseconds(Int(arc4random_uniform(1000)))
+        DispatchQueue.main.asyncAfter(deadline: moveTime) {
             
             if lifeSpan <= 0 {
                
@@ -150,5 +150,14 @@ class FloatingScene: SKScene {
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
+    }
+    override func didChangeSize(_ oldSize: CGSize) {
+        
+       // NSLog("%@", "Body Did change size")
+        
+        let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        borderBody.friction = 0
+        self.physicsBody = borderBody
+        
     }
 }

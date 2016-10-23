@@ -60,14 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8323D6E51DBBB70300A8FA15 /* ContentViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				83B324941DBB1BED000A13D9 /* LeftMainViewController.swift */,
-			);
-			name = ContentViewControllers;
-			sourceTree = "<group>";
-		};
 		83B324861DBB1BEC000A13D9 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +81,7 @@
 		83B324911DBB1BEC000A13D9 /* InteractiveAnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8323D6E51DBBB70300A8FA15 /* ContentViewControllers */,
+				83B324941DBB1BED000A13D9 /* LeftMainViewController.swift */,
 				83B324921DBB1BED000A13D9 /* AppDelegate.swift */,
 				83B324961DBB1BED000A13D9 /* Main.storyboard */,
 				83B324991DBB1BED000A13D9 /* Assets.xcassets */,
@@ -359,7 +351,7 @@
 				DEVELOPMENT_TEAM = 6SV6932H64;
 				INFOPLIST_FILE = InteractiveAnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.InteractiveAnimationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.animatedBackground.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -372,7 +364,7 @@
 				DEVELOPMENT_TEAM = 6SV6932H64;
 				INFOPLIST_FILE = InteractiveAnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.InteractiveAnimationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.animatedBackground.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
