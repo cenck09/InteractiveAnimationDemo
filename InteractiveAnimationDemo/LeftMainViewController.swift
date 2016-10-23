@@ -36,13 +36,9 @@ class LeftMainViewController: UIViewController {
         
         // Configure the view.
         let skView = self.view as! SKView
-        skView.showsFPS = true
-        skView.showsNodeCount = true
-        
-        /* Sprite Kit applies additional optimizations to improve rendering performance */
-        skView.ignoresSiblingOrder = true
-        
-        /* Set the scale mode to scale to fit the window */
+//        skView.showsFPS = true
+//        skView.showsNodeCount = true
+//        skView.ignoresSiblingOrder = true
         scene.scaleMode = .resizeFill
 
         skView.presentScene(scene)
@@ -51,23 +47,18 @@ class LeftMainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-     //   if (motionManager.accelerometerData != nil) {
+        motionManager.startDeviceMotionUpdates(to: motionQueue, withHandler: {
+            (data:CMDeviceMotion?, error:Error?) in
             
-
-            motionManager.startAccelerometerUpdates(to: motionQueue, withHandler: {
-                (data:CMAccelerometerData?, error: Error?) in
+            DispatchQueue.main.async(execute: {
                 
-                DispatchQueue.main.async(execute: {
-                    NSLog("%@ x= %f , y= %f", "Accel Data: ", Float((data?.acceleration.x)!), Float((data?.acceleration.y)!))
-
-//                    NSLog("Acceleration Data: x= %@ , y= %@", data?.acceleration.x , data?.acceleration.y)
-
-                    if (self.scene != nil) {
-                        self.scene.applyUniversalForce(force: CGVector(dx: (Int(10*(data?.acceleration.x)!) * 100), dy: (Int(10*(data?.acceleration.y)!) * 100) ))
-                    }
-                })
+                if (self.scene != nil) {
+                    self.scene.applyUniversalForce(force: CGVector(dx: (Int(10*((data?.gravity.x)!)) * 2), dy: (Int(10*(data?.gravity.y)!) * 2) ))
+                    
+                    self.scene.applyUniversalForce(force: CGVector(dx: (Int(10*((data?.rotationRate.y)!)) * 10), dy: (Int(10*(data?.rotationRate.x)!) * 10) ))
+                }
             })
-    //    }
+        })
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

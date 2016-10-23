@@ -12,14 +12,14 @@ import UIKit
 
 class FloatingScene: SKScene {
     
-    static let orbCount : Int = 10
+    static let orbCount : Int = 15
     static let maxLife : UInt32 = 30
     static let minLife : UInt32 = 5
     
     static let maxSize : UInt32 = 20
     static let minSize : UInt32 = 20
 
-    static let fadeSpeed : Int = 5
+    static let fadeSpeed : Int = 2
     
     let orbArray : NSMutableArray = {
         var arr = NSMutableArray()
