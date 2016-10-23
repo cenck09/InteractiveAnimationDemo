@@ -55,7 +55,10 @@ class LeftMainViewController: UIViewController {
                 if (self.scene != nil) {
                     self.scene.applyUniversalForce(force: CGVector(dx: (Int(10*((data?.gravity.x)!)) * 2), dy: (Int(10*(data?.gravity.y)!) * 2) ))
                     
-                    self.scene.applyUniversalForce(force: CGVector(dx: (Int(10*((data?.rotationRate.y)!)) * 10), dy: (Int(10*(data?.rotationRate.x)!) * 10) ))
+                     self.scene.applyUniversalForce(force: CGVector(dx: (Int(10*((data?.userAcceleration.x)!)) * 200), dy: (Int(10*(data?.userAcceleration.y)!) * 200) ))
+
+                    self.scene.applyUniversalForce(force: CGVector(dx: ((data?.rotationRate.y)! * 2), dy: ((data?.rotationRate.x)! * 2)))
+
                 }
             })
         })
