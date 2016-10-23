@@ -32,22 +32,15 @@ class LeftMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scene = FloatingScene(fileNamed:"FloatingScene")
-        
-        
-        // Configure the view.
-        let skView = self.view as! SKView
-//        skView.showsFPS = true
-//        skView.showsNodeCount = true
-//        skView.ignoresSiblingOrder = true
-        scene.scaleMode = .resizeFill
 
-        skView.presentScene(scene)
+        (self.view as! SKView).presentScene(scene)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         motionManager.startDeviceMotionUpdates(to: motionQueue, withHandler: {
+            
             (data:CMDeviceMotion?, error:Error?) in
             
             DispatchQueue.main.async(execute: {
@@ -62,13 +55,6 @@ class LeftMainViewController: UIViewController {
                 }
             })
         })
-    }
-
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-//        if (scene != nil) {
-//            scene.size = CGSize(width: size.width-10, height: size.height-10)
-//        }
     }
 }
 

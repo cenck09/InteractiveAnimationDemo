@@ -35,7 +35,6 @@ class FloatingScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
-        NSLog("%@", "Body Did Move")
         let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
 
         borderBody.friction = 0
