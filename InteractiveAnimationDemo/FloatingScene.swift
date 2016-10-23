@@ -27,7 +27,7 @@ class FloatingScene: SKScene {
     }()
     
     open func applyUniversalForce(force:CGVector){
-        for i : Int in 0...orbArray.count {
+        for i : Int in 0...orbArray.count-1 {
             (orbArray[i] as! SKSpriteNode).physicsBody?.applyForce(force)
         }
     }
@@ -46,7 +46,7 @@ class FloatingScene: SKScene {
 
             let deadlineTime = DispatchTime.now() + .seconds(Int(arc4random_uniform(4)))
             DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-                self.spawnSprite(sprite: SKSpriteNode(imageNamed: "ball"))
+                self.spawnSprite(sprite: SKSpriteNode(imageNamed: "ball-o"))
             }
         }
     }
@@ -102,7 +102,7 @@ class FloatingScene: SKScene {
             (node:SKNode, val:CGFloat) in
             self.orbArray.remove(node)
             node.removeFromParent();
-            self.spawnSprite(sprite: SKSpriteNode(imageNamed: "ball"))
+            self.spawnSprite(sprite: SKSpriteNode(imageNamed: "ball-o"))
         })
     
         
